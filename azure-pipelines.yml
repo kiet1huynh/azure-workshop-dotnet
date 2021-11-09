@@ -12,10 +12,11 @@ steps:
 
 - pwsh: |
     docker compose up -d
-    workingDirectory: test/hello-sqlserver
-    displayName: Start SQL Server
+  workingDirectory: test/hello-sqlserver
+  displayName: Start SQL Server
 
 - task: DotNetCoreCLI@2
   inputs:
     command: 'test'
+    arguments: '-c Release --no-build'
   displayName: Run Unit Tests
