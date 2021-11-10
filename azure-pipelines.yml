@@ -18,5 +18,4 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'test'
-    arguments: '-c Release --no-build'
   displayName: Run Unit Tests
